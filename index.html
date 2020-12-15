@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>NEW</title>
+  <meta name="description" content="NEW" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="/images/favicon.png" type="image/png">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body class="body">
+
+  <header class="header" id="header">
+    <div class="container">
+      <div class="header-left">
+        <a href="/" class="logo">
+          <img src="img/logo.svg">
+        </a>
+        <div class=" border border-1"></div>
+        <h2>ПРОДАВЕЦ</h2>
+      </div>
+
+      <ul class="menu-box">
+        <li>
+          <a href="/">
+            <img src="img/001-icon.svg">
+            <span>ТОВАРЫ</span>
+          </a>
+        </li>
+        <li>
+          <a href="/">
+            <img src="img/002-icon.svg">
+            <span>ЗАКАЗЫ</span>
+          </a>
+        </li>
+        <li>
+          <a href="/">
+            <img src="img/003-icon.svg">
+            <span>СООБЩЕНИЯ</span>
+          </a>
+        </li>
+        <li>
+          <a href="/">
+            <img src="img/004-icon.svg">
+            <span>СТАТИСТИКА</span>
+          </a>
+        </li>
+        <li>
+          <a href="/">
+            <img src="img/005-icon.svg">
+            <span>ПОДДЕРЖКА</span>
+          </a>
+        </li>
+      </ul>
+      <div class="header-right">
+        <a href="/" class="button">ДОБАВИТЬ ТОВАР</a>
+        <div class="border"></div>
+        <div class="header-lk">
+          <img src="img/006-icon.svg">
+          <span>Ювелирный дом MOISEIKIN</span>
+        </div>
+      </div>
+      <div class="burger-menu">
+        <a href="#" class="burger-menu__button">
+          <span class="burger-menu__lines"></span>
+        </a>
+        <nav class="burger-menu__nav">
+          <a href="#" class="burger-menu__link">Товары</a>
+          <a href="#" class="burger-menu__link">Заказы</a>
+          <a href="#" class="burger-menu__link">Сообщения</a>
+          <a href="#" class="burger-menu__link">Статистика</a>
+          <a href="#" class="burger-menu__link">Поддержка</a>
+        </nav>
+        <div class="burger-menu__overlay"></div>
+      </div>
+    </div>
+  </header>
+
+  <section class="home-one">
+    <div class="container-2">
+      <div class="tabs-menu">
+        <h1 class="h1">Добавить новый товар</h1>
+        <ul class="tabs__caption">
+          <li>
+            <a href="#info" class="tabs__item">ОСНОВНАЯ ИНФ.</a>
+          </li>
+          <li>
+            <a href="#image" class="tabs__item">ИЗОБРАЖЕНИЯ</a>
+          </li>
+          <li>
+            <a href="#video" class="tabs__item">ВИДЕО</a>
+          </li>
+          <li>
+            <a href="#more" class="tabs__item">ПОДРОБНОСТИ</a>
+          </li>
+          <li>
+            <a href="#status" class="tabs__item">СОСТОЯНИЕ</a>
+          </li>
+          <li>
+            <a href="#price" class="tabs__item">ЦЕНА</a>
+          </li>
+          <li>
+            <a href="#delivery" class="tabs__item">ДОСТАВКА</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <form id="rf" class="rf" method="POST">
+      <div class="tabs__content section" id="info">
+        <div class="container-2">
+          <div class="tabs-content">
+            <h2 class="h2">Основная информация</h2>
+            <div class="form-row">
+              <label for="title">Заголовок *
+                <div class="photo" data-title="Подсказка не найдена"><img src="img/007-icon.svg"></div>
+              </label>
+              <input class="rfield" type="text" min="10" max="100" id="test" name="title" required>
+              <div id="max-test"></div>
+            </div>
+            <div class="form-row">
+              <label for="comment">Описание *
+                <div class="photo" data-title="Подсказка не найдена"><img src="img/007-icon.svg"></div>
+              </label>
+              <textarea class="rfield" name="comment" min="10" required></textarea>
+            </div>
+            <div class="form-row">
+              <label for="spec">Основные характеристики *
+                <div class="photo" data-title="Подсказка не найдена"><img src="img/007-icon.svg"></div>
+              </label>
+              <textarea class="rfield" name="spec" min="10" required></textarea>
+            </div>
+            <div class="form-row">
+              <label>Категория * </label>
+              <div class="cats">
+                <div class="item">
+                  <button type="button" class="add-new">Добавить категорию</button>
+                </div>
+              </div>
+
+              <div class="modal">
+                <select class="categories" hidden>
+                  <option>Браслеты &gt;</option>
+                  <option>Броши &gt;</option>
+                  <option>Зажимы для галстуков &gt;</option>
+                  <option>Запонки &gt;</option>
+                  <option>Колье и ожерелья &gt;</option>
+                  <option>Кольца &gt;</option>
+                  <option>Подвески &gt;</option>
+                  <option>Серьги &gt;</option>
+                  <option>Другие украшения &gt;</option>
+                </select>
+                <div class="subcategories" hidden>
+                  <select data-category="Браслеты >">
+                    <option>Браслеты-бусы</option>
+                    <option>Винтажные браслеты</option>
+                    <option>Браслеты-кламперы</option>
+                    <option>Глидерные браслеты</option>
+                    <option>Жемчужные браслеты</option>
+                    <option>Звеньевые браслеты</option>
+                    <option>Ладонные браслеты</option>
+                    <option>Браслеты-манжеты</option>
+                    <option>Браслеты на ногу</option>
+                    <option>Браслеты-обручи</option>
+                    <option>Браслеты панье</option>
+                    <option>Плетеные браслеты</option>
+                    <option>Разомкнутые браслеты</option>
+                    <option>Составные браслеты</option>
+                    <option>Створчатые браслеты</option>
+                    <option>Теннисные браслеты</option>
+                    <option>Браслеты-цепи</option>
+                    <option>Другие браслеты</option>
+                  </select>
+                  <select data-category="Броши >">
+                    <option>Броши бусы</option>
+                    <option>Винтажные броши</option>
+                    <option>Броши кламперы</option>
+                  </select>
+                  <select data-category="Зажимы для галстуков >">
+                    <option>Зажимы для галстуков бусы</option>
+                    <option>Винтажные Зажимы для галстуков</option>
+                  </select>
+                  <select data-category="Запонки >">
+                    <option>Зажимы для галстуков бусы</option>
+                    <option>Винтажные Зажимы для галстуков</option>
+                  </select>
+                  <select data-category="Колье и ожерелья >">
+                    <option>Бусы</option>
+                    <option>Жемчужные ожерелья</option>
+                    <option>Каплевидные кулоны</option>
+                    <option>Звеньевые ожерелья</option>
+                    <option>Многорядные ожерелья</option>
+                    <option>Камеи</option>
+                    <option>Ожерелья коллар</option>
+                    <option>Кулоны</option>
+                    <option>Лариаты</option>
+                    <option>Ожерелья матинэ</option>
+                    <option>Медальоны</option>
+                    <option>Ожерелья опера</option>
+                    <option>Пластроны</option>
+                    <option>Подвески</option>
+                    <option>Ожерелья принцесса</option>
+                    <option>Ривьеры</option>
+                    <option>Ожерелья роуп</option>
+                    <option>Сотуары</option>
+                    <option>Склаваж колье</option>
+                    <option>Склаваж ожерелья</option>
+                    <option>Фермуары</option>
+                    <option>Цепи</option>
+                    <option>Ожерелья чокер</option>
+                    <option>Другие колье и ожерелья</option>
+                  </select>
+                  <select data-category="Кольца >">
+                    <option>Кольца-вензеля</option>
+                    <option>Кольца вечности</option>
+                    <option>Кольца-кастеты</option>
+                    <option>Кластерные кольца</option>
+                    <option>Коктейльные кольца</option>
+                    <option>Кольца-купола</option>
+                    <option>Обручальные кольца</option>
+                    <option>Кольца-перевертыши</option>
+                    <option>Перстни</option>
+                    <option>Печатки</option>
+                    <option>Помолвочные кольца</option>
+                    <option>Разъемные кольца</option>
+                    <option>Кольца-солитеры</option>
+                    <option>Кольца Ты и Я</option>
+                    <option>Фаланговые кольца</option>
+                    <option>Фантазийные кольца</option>
+                    <option>Другие кольца</option>
+                  </select>
+                  <select data-category="Подвески >">
+                    <option>Подвески</option>
+                    <option>Подвески2</option>
+                    <option>Подвески3</option>
+                  </select>
+                  <select data-category="Серьги >">
+                    <option>Висячие серьги</option>
+                    <option>Двусторонние серьги</option>
+                    <option>Серьги-джекеты</option>
+                    <option>Серьги жирандоли</option>
+                    <option>Серьги-люстры</option>
+                    <option>Серьги-капли</option>
+                    <option>Серьги каффы</option>
+                    <option>Серьги-клаймберы</option>
+                    <option>Серьги-кластеры</option>
+                    <option>Клипсы</option>
+                    <option>Серьги-кольца</option>
+                    <option>Серьги конго</option>
+                    <option>Серьги медальоны</option>
+                    <option>Моносерьги</option>
+                    <option>Серьги-протяжки</option>
+                    <option>Пусеты</option>
+                    <option>Серьги-солитеры</option>
+                    <option>Серьги-цепочки</option>
+                    <option>Этнические серьги</option>
+                    <option>Другие серьги</option>
+                  </select>
+                  <select data-category="Другие украшения >">
+                    <option>Украшения</option>
+                    <option>Украшения2</option>
+                    <option>Украшения3</option>
+                  </select>
+                </div>
+                <button type="button" class="close">X</button>
+                <h2 class="h2">Выбрать категорию</h2>
+                <hr class="line">
+                <div class="info">
+                  <span class="location">Категория: <span class="group"></span>&nbsp;<span
+                      class="subgroup"></span></span>
+                  <button type="button" class="clear">Очистить</button>
+                </div>
+                <div class="select-group">
+                  <select class="cat" multiple></select>
+                  <select class="subcat" multiple></select>
+                </div>
+                <button type="button" class="save" disabled>Сохранить</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tabs__content section" id="image">
+        <div class="container-2">
+          <div class="tabs-content">
+            <h2 class="h2">Изображения</h2>
+            <div class="form-row" id="drop-files">
+              <div class="view">
+                <div class="img general">
+                  <input type="file" name="img1" hidden>
+                  <img>
+                  <div class="info-1"><span>ОСНОВНОЕ</span>
+                    <button type="button" class="tools">...</button>
+                  </div>
+                  <div class="dropdown"><span class="save-1">Сохранить</span><span class="del">Удалить</span></div>
+                </div>
+                <div class="img">
+                  <input type="file" name="img2" hidden>
+                  <img>
+                  <div class="info-1"><span></span>
+                    <button type="button" class="tools">...</button>
+                  </div>
+                  <div class="dropdown"><span class="save-1">Сохранить</span><span class="del">Удалить</span></div>
+                </div>
+                <div class="img">
+                  <input type="file" name="img3" hidden>
+                  <img>
+                  <div class="info-1"><span></span>
+                    <button type="button" class="tools">...</button>
+                  </div>
+                  <div class="dropdown"><span class="save-1">Сохранить</span><span class="del">Удалить</span></div>
+                </div>
+                <div class="img">
+                  <input type="file" name="img4" hidden>
+                  <img>
+                  <div class="info-1"><span></span>
+                    <button type="button" class="tools">...</button>
+                  </div>
+                  <div class="dropdown"><span class="save-1">Сохранить</span><span class="del">Удалить</span></div>
+                </div>
+                <div class="img">
+                  <input type="file" name="img5" hidden>
+                  <img>
+                  <div class="info-1"><span></span>
+                    <button type="button" class="tools">...</button>
+                  </div>
+                  <div class="dropdown"><span class="save-1">Сохранить</span><span class="del">Удалить</span></div>
+                </div>
+              </div>
+              <label class="drop-area">
+                <img src="img/09-Photo-Icon.png" alt="">
+                <h3>Загрузить Изображения</h3>
+                <p class="picture">Перетащите изображение сюда или выберите несколько файлов</p>
+                <p>Требования к фотографиям: Минимальный размер изображения 720 x 720 px.
+                  <br> Файлы только в формате JPEG. Максимальный размер фалов 16 Мбайт.
+                  <br> Рекомендуемый размер изображения 2000 x 2000 px.</p>
+                <input type="file" accept="image/jpeg" hidden>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tabs__content section" id="video">
+        <div class="container-2">
+          <div class="tabs-content">
+            <h2 class="h2">Видео</h2>
+            <div class="form-row" id="drop">
+              <div class="view-2">
+                <div class="video general">
+                  <video></video>
+                  <div class="box">
+                    <div class="info-2"><span>ОСНОВНОЕ</span>
+                      <button type="button" class="tools-2">...</button>
+                    </div>
+                    <div class="dropdown-2"><span class="save-2">Сохранить</span><span class="del-2">Удалить</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="video">
+                  <video></video>
+                  <div class="box">
+                    <div class="info-2"><span></span>
+                      <button type="button" class="tools-2">...</button>
+                    </div>
+                    <div class="dropdown-2"><span class="save-2">Сохранить</span><span class="del-2">Удалить</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <label class="drop-area-2">
+                <img src="img/video.png" alt="">
+                <h3>Загрузить Видео</h3>
+                <p class="picture">Перетащите видео сюда или выберите файлы</p>
+                <p>Максимальный размер файла видео 200 Мбайт.</p>
+                <input type="file" accept="video/*" hidden>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tabs__content section" id="more">
+        <div class="container-2">
+          <div class="tabs-content">
+            <h2 class="h2">Подробности о товаре</h2>
+            <div class="form-row" id="drop-files" ondragover="return false">
+              <label for="pro">Создатель *
+                <div class="photo" data-title="Подсказка не найдена"><img src="img/007-icon.svg"></div>
+              </label>
+              <input class="search" type="text" name="pro" id="pro">
+              <label class="chek">Создатель этого произведения неизвестен
+                <input type="checkbox" class="checkbox" id="checkbox">
+                <span class="checkmark"></span>
+              </label>
+            </div>
+            <div class="form-row">
+              <label for="coll">Коллекция</label>
+              <input class="search" type="text" name="coll">
+            </div>
+            <div class="form-row">
+              <label for="tech">Уникальные технологии
+                <div class="photo" data-title="Подсказка не найдена"><img src="img/007-icon.svg"></div>
+              </label>
+              <input class="search" type="text" name="tech">
+            </div>
+            <div class="two-inputs">
+              <div class="form-row">
+                <div id="lifestyle"></div>
+              </div>
+            </div>
+            <div class="two-inputs">
+              <div class="form-row">
+                <label class="count" for="">Страна создания
+                  <div class="photo" data-title="Подсказка не найдена"><img src="img/007-icon.svg"></div>
+                </label>
+                </label>
+                <div class="country">
+                  <div id="near">
+                    <label>Россия и Ближнее зарубежье</label>
+                    <select name="country_of_creation" size=5 width=270>
+                      <option>Россия</option>
+                      <option>Россия, Екатеринбург</option>
+                      <option>Россия, Кострома </option>
+                      <option>Россия, Москва</option>
+                      <option>Россия, Санкт-Петербург </option>
+                      <option>Азербайджан</option>
+                    </select>
+                  </div>
+                  <div id="further">
+                    <label>Дальнее зарубежье</label>
+                    <select name="country" size=5 width=350>
+                      <option>Австралия</option>
+                      <option>Австрия</option>
+                      <option>Акротири</option>
+                      <option>Албания</option>
+                      <option>Алжир</option>
+                      <option>Американское Самоа</option>
+                    </select>
+                  </div>
+                </div>
+                <label class="chek">Место создания неизвестно
+                  <input type="checkbox" class="checkbox" id="checkbox2">
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+
+            </div>
+            <div class="two-inputs">
+              <div class="form-row" id="drop-files" ondragover="return false">
+                <label for="data" class="date">Дата создания * <img src="img/007-icon.svg">
+                  <div id="datas">
+                    <ul class="year">
+                      <li>Используйте полный год (напр., 1999 г.) или диапазон (напр., 2000–2005 гг.), если они
+                        известны.
+                      </li>
+                      <li>Используйте «около», если точная дата не определена (напр., Около 1850 г.)</li>
+                      <li>Введите «Неизвестно», если дата создания неизвестна.</li>
+                    </ul>
+                  </div>
+                </label>
+                <input type="text" placeholder="Ввести дату" class="data" name="data" required>
+              </div>
+            </div>
+            <div class="two-inputs">
+              <div class="form-row" id="drop-files" ondragover="return false">
+                <label for="">Период создания *
+                  <div class="photo" data-title="Подсказка не найдена"><img src="img/007-icon.svg"></div>
+                </label>
+                <div id="period">
+                  <select name="PERIOD_CREATION" size=5 width=465>
+                    <option value="0">Не выбрано</option>
+                    <option value="118">2020–2029 гг.</option>
+                    <option value="119">2010–2019 гг.</option>
+                    <option value="120">2000–2009 гг.</option>
+                    <option value="121">XXI век</option>
+                    <option value="122">Конец XX века</option>
+                    <option value="123">1990–1999 гг.</option>
+                    <option value="124">1980–1989 гг.</option>
+                    <option value="125">1970–1979 гг.</option>
+                    <option value="126">Середина XX века</option>
+                    <option value="127">1960–1969 гг.</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="form-row">
+              <label for="style">Пол *</label>
+              <div class="form-radio-cont">
+                <input class="sex" required type="radio" id="sex1" name="sex" value="man">
+                <label for="sex1">Женский</label>
+              </div>
+              <div class="form-radio-cont">
+                <input class="sex" type="radio" id="sex2" name="sex" value="woman">
+                <label for="sex2">Мужской</label>
+              </div>
+              <div class="form-radio-cont">
+                <input class="sex" type="radio" id="sex3" name="sex" value="uni">
+                <label for="sex3">Унисекс</label>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="contain">
+                <div id="stones">
+                  <label>Камни</label>
+                  <select name="stones" placeholder="Выбрать один или несколько камней" size=5 width=740 multiple>
+                    <option>Агат</option>
+                    <option>Аквамарин</option>
+                    <option>Александрит</option>
+                    <option>Амазонит</option>
+                    <option>Амотист</option>
+                  </select>
+                  <div class="inform"></div>
+                </div>
+                <div id="manipul-stones">
+                  <label>Обработка камней</label>
+                  <select name="stone_processing" placeholder="Выбрать один или несколько видов обработки" size=5 width=690 multiple>
+                    <option>Ашер огранка</option>
+                    <option>Багет огранка</option>
+                    <option>Бармон огранка</option>
+                    <option>Бочка огранка</option>
+                    <option>Бриллиантовая огранка</option>
+                  </select>
+                  <div class="inform"></div>
+                </div>
+                <div id="metalls">
+                  <label>Металлы</label>
+                  <select name="metalls" placeholder="Выбрать один или несколько металлов" size=5 width=740 multiple>
+                    <option>Золото</option>
+                    <option>Золото 375 пробы</option>
+                    <option>Золото 500 пробы</option>
+                    <option>Золото 585 пробы</option>
+                    <option>Золото 750 пробы</option>
+                    <option>Золото 9999 пробы</option>
+                  </select>
+                  <div class="inform"></div>
+                </div>
+                <div id="others">
+                  <label>Другие материалы</label>
+                  <select name="other metalls" placeholder="Выбрать один или несколько материалов" size=5 width=740 multiple>
+                    <option>Дерево</option>
+                    <option>Кость</option>
+                    <option>Кожа</option>
+                    <option>Перламутр</option>
+                    <option>Раковина</option>
+                  </select>
+                  <div class="inform"></div>
+                </div>
+              </div>
+              <div class="two-inputs">
+                <div class="form-row sizes">
+                  <label for="size">Размеры, мм</label>
+                  <label for="size">Длина</label>
+                  <input type="number" name="size">
+                </div>
+                <div class="form-row parameter">
+                  <label for="size">Ширина</label>
+                  <input type="number" name="size">
+                </div>
+                <div class="form-row parameter">
+                  <label for="size">Высота</label>
+                  <input type="number" name="size">
+                </div>
+                <div class="form-row parameter">
+                  <label for="size">Диаметр</label>
+                  <input type="number" name="size">
+                </div>
+              </div>
+              <div class="two-inputs">
+
+                <div class="form-row">
+                  <label for="weight">Вес</label>
+                  <input class="weight" type="text" name="weight">
+                </div>
+                <div class="form-row">
+                  <div id="measurement">
+                    <select name="weight" size=5 width=300>
+                      <option>Грамм</option>
+                      <option>Карат</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tabs__content section" id="status">
+          <div class="container-2">
+            <div class="tabs-content">
+              <div class="form-row sostoianie">
+                <h2 class="h2">Состояние товара</h2>
+                <label for="new">Состояние * <i>(Выберите одно)</i></label>
+                <div class="form-radio-cont">
+                  <input type="radio" id="new1" name="new" value="new" required>
+                  <label for="new1">
+                    Новый товар
+                  </label>
+                </div>
+                <span class="tovar">Совершенно новый товар, не имевший владельца и ранее не использовавшийся. <br>Не
+                  имеет повреждений и без
+                  следов
+                  износа.</span>
+                <div class="form-radio-cont">
+                  <input type="radio" id="new2" name="new" value="cool">
+                  <label for="new2">
+                    Превосходное
+                  </label>
+                </div>
+                <span class="tovar">Имел владельца, практически новый и лишь слегка изношен. Без видимых следов <br>
+                  использования и в идеальном
+                  состоянии.</span>
+                <div class="form-radio-cont">
+                  <input type="radio" id="new3" name="new" value="good">
+                  <label for="new3">
+                    Хорошее
+                  </label>
+                </div>
+                <span class="tovar">Имел владельца и бережно использовался, с небольшими признаками этого использования.
+                  Можно обнаружить легкие
+                  царапины, но структурные проблемы отсутствуют.</span>
+                <div class="form-radio-cont">
+                  <input type="radio" id="new4" name="new" value="satisfactory">
+                  <label for="new4">
+                    Удовлетворительное
+                  </label>
+                </div>
+                <span class="tovar">Имел владельца и использовался с видимыми признаками косметического износа,<br>
+                  включая царапины и трещины, но
+                  находится в удовлетворительном состоянии.</span>
+              </div>
+              <div class="form-row">
+                <label for="new">Ремонт и доработки *</label>
+                <div class="form-radio-cont">
+                  <input type="radio" id="remont1" name="remont" value="no" required>
+                  <label class="radio" for="remont1">
+                    Нет, ремонт и доработки не производились
+                  </label>
+                </div>
+                <div class="form-radio-cont">
+                  <input type="radio" id="remont2" name="remont" value="yes">
+                  <label class="radio" for="remont2">
+                    Да, ремонт и доработки производились
+                  </label>
+                </div>
+              </div>
+              <div class="form-row commentariy">
+                <label for="comment">Дополнительные комментарии о состоянии этого товара</label>
+                <textarea class="comm" name="comment" max="250" min="10" id="comment" value=""></textarea>
+                <div id="max-comment"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tabs__content section" id="price">
+          <div class="container-2">
+            <div class="tabs-content">
+              <h2 class="h2">Цена и количество</h2>
+              <div class="form-row cost">
+                <label for="one">Количество в наличии * </label>
+                <input id="number" type="number" class="number raz" name="one" placeholder="1" required>
+                <label class="chek">Неограниченное
+                  <input type="checkbox" class="checkbox" id="checkboxes">
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+              <div class="border"></div>
+              <div class="form-row">
+                <label class="chek">Цена товара может обсуждаться
+                  <input type="checkbox" class="checkbox" id="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+                <span>Покупатель может посылать
+                  предложения по этому товару.</span>
+              </div>
+              <div class="border"></div>
+
+              <div class="form-row rows"></div>
+              <label for="num">Цена товара * <i>(Видна всем покупателям)</i></label>
+              <div class="fl">
+                <div class="field-group">
+                  <input class="field raz" type="number" oninput="up(this)" step="0.01" min="0">
+                  <span class="currency">RUB</span>
+                </div>
+                За штуку
+                <div class="currency-select">
+                  <select name="currency">
+                    <option>RUB</option>
+                    <option>USD</option>
+                    <option>EUR</option>
+                  </select>
+                </div>
+              </div>
+              <label class="chek cheks">Цена по запросу
+                <div class="photo" data-title="Подсказка не найдена"><img src="img/007-icon.svg"></div>
+                <input type="checkbox" class="checkbox" id="price-on-request">
+                <span class="checkmark"></span>
+              </label>
+              <div class="border"></div>
+              <div class="two-inputs">
+                <div class="form-row sostoianie">
+                  <label>Автоматические частные предложения</label>
+                  <div class="form-checkbox-cont">
+                    <label class="chek">Автоматически рассылать предложения заинтересованным клиентам
+                      <input name="agree" type="checkbox" class="checkbox" id="cb">
+                      <span class="checkmark"></span>
+                    </label>
+                    <span>Выберите сумму предложения, а остальное сделает ZLT. </span>
+                    <br>
+                    <span>Срок действия автоматических частных предложений истекает через 7 дней.</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="disc">
+                  <div id="discount">
+                    <label>Предложить скидку</label>
+                    <select name="sales" size=5 width=173>
+                      <option>10%</option>
+                      <option>15%</option>
+                      <option>20%</option>
+                      <option>25%</option>
+                    </select>
+                  </div>
+                  <div class="sale">
+                    <input type="number" class="raz rub">
+                    <span class="money">RUB</span>
+                  </div>
+                  <span class="text-number">За штуку</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="tabs__content section" id="delivery">
+          <div class="container-2">
+            <div class="tabs-content">
+              <h2 class="h2">Обработка заказа и доставка</h2>
+              <div class="form-row">
+                <label for="style">Время обработки заказа *
+                  <div class="photo" data-title="Подсказка не найдена"><img src="img/007-icon.svg"></div>
+                </label>
+                <div id="time">
+                  <select name="time_of_processing" size=5 width=300>
+                    <option>1 рабочий день</option>
+                    <option>2 рабочих дня</option>
+                    <option>3 рабочих дня</option>
+                    <option>4 рабочих дня</option>
+                    <option>5 рабочих дней</option>
+                    <option>6 рабочих дней</option>
+                    <option>7 рабочих дней
+                    </option>
+                    <option>8 рабочих дней</option>
+                    <option>9 рабочих дней</option>
+                    <option>10 рабочих дней</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-row deliv">
+                <label for="style">Местонахождение товара *</label>
+              </div>
+              <div class="border border-1"></div>
+              <div class="form-row">
+                <div class="deliv-block">
+                  <div class="deliv-name">
+                    <div class="form-radio-cont">
+                      <input type="radio" id="deliv1" name="deliv" value="MOISEIKIN" required>
+                      <label for="deliv1">
+                        Ювелирный дом MOISEIKIN
+                      </label>
+                    </div>
+                    <span class="house">Склад</span>
+                  </div>
+                  <div class="deliv-adress">
+                    <span>62 00 24, Россия</span>
+                    <span>Екатеринбург, ул. Новинская, 2У</span>
+                  </div>
+                  <div class="deliv-contacts">
+                    <span>тел.: +7 (343) 372-95-21</span>
+                    <span>e-mail: news@moiseikin.ru</span>
+                  </div>
+                </div>
+              </div>
+              <div class="border border-1"></div>
+              <div class="form-row place">
+                <button type="button" type="button" class="btn">
+                  + Добавить местонахождение
+                </button>
+                <div class="deliv-block-2">
+                  <div class="deliv-block">
+                    <div class="deliv-name">
+                      <div class="form-radio-cont">
+                        <input type="radio" id="deliv2" name="deliv" value="other">
+                        <label for="deliv2">
+                          Ювелирный дом MOISEIKIN
+                        </label>
+                      </div>
+                      <span class="house">Склад</span>
+                    </div>
+                    <div class="deliv-adress">
+                      <span>62 00 24, Россия</span>
+                      <span>Екатеринбург, ул. Новинская, 2У</span>
+                    </div>
+                    <div class="deliv-contacts">
+                      <span>тел.: +7 (343) 372-95-21</span>
+                      <span>e-mail: news@moiseikin.ru</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="border border-1"></div>
+              <div class="form-row">
+                <label class="variant">Варианты доставки</label>
+                <label class="zlt">Доставка с помощью ZLT</label>
+                <div class="rectangle">
+                  <a href="#">Посмотреть расценки на доставку</a>
+                </div>
+                <label class="zlt" for="style">Добавьте собственные расценки на доставку</label>
+                <label class="chek">Я хочу предложить расценки на доставку
+                  <input type="checkbox" class="checkbox" id="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+              <div class="border"></div>
+              <div class="form-row politica">
+                <div class="politics">
+                  <label>Политика возврата *</label>
+                                <p>Если клиент покупает на ZLT товар, который не соответствует его описанию, поврежден или
+                                    не доставлен, онлайн-заказ будет регулироваться нашими УСЛОВИЯМИ И ПОЛОЖЕНИЯМИ,
+                                    а также любыми применимыми в этом случае законами, которые могут потребовать возмещения.
+                                    Для получения дополнительной информации ознакомьтесь с <a href=" # ">ЧЗВ о политике возврата.</a></p>
+                                <div class=" rectangle-2 ">
+                                    <label>Защита продавца при возврате товара</label>
+                                    <span>Клиенты, возвращающие товары, должны соблюдать политику ZLT:</span>
+                                    <ul>
+                                        <li>Все возвраты должны проходить через ZLT чтобы обеспечить покрытие по нашей страховке.</li>
+                                        <li>Товар должен быть возвращен в том состоянии, в котором был получен.</li>
+                                        <li>Продавцы не несут ответственности за оплату международных заказов, <br>
+                                        включая налоги и пошлины.</li>
+                                    </ul>
+                                </div>
+                                <div class=" rectangle-3 ">
+                                    <div class=" form-radio-cont ">
+                                        <input type="radio" id="return" name="return" value="return" checked required>
+                                        <label for="return">
+                                            Этот товар можно вернуть в течение 3 дней с момента доставки. N/A
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" form-row politica-2 ">
+                            <button type="button" type=" button " class=" btn btn-2 ">
+                                + Добавить политику возврата
+                            </button>
+                            <div class=" politics-2 ">
+                                <div class=" politics ">
+                                    <label for=" style ">Политика возврата *</label>
+                                    <p>Если клиент покупает на ZLT товар, который не соответствует его описанию, поврежден или
+                                        не доставлен, онлайн-заказ будет регулироваться нашими УСЛОВИЯМИ И ПОЛОЖЕНИЯМИ,
+                                        а также любыми применимыми в этом случае законами, которые могут потребовать возмещения.
+                                        Для получения дополнительной информации ознакомьтесь с <a href=" # ">ЧЗВ о политике возврата.</a></p>
+                                    <div class=" rectangle-2 ">
+                                        <label for=" style ">Защита продавца при возврате товара</label>
+                                        <span>Клиенты, возвращающие товары, должны соблюдать политику ZLT:</span>
+                                        <ul>
+                                            <li>Все возвраты должны проходить через ZLT чтобы обеспечить покрытие по нашей страховке.</li>
+                                            <li>Товар должен быть возвращен в том состоянии, в котором был получен.</li>
+                                            <li>Продавцы не несут ответственности за оплату международных заказов, <br>
+                                                включая налоги и пошлины.</li>
+                                        </ul>
+                                    </div>
+                                    <div class=" rectangle-3 ">
+                                        <div class=" form-radio-cont ">
+                                            <input type="radio" id="return-2" name="return-2" value="other">
+                                            <label for="return-2">
+                                                Этот товар можно вернуть в течение 3 дней с момента доставки. N/A
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    </section>
+
+    <section class=" footer ">
+        <div class=" container ">
+            <div class=" footer-block ">
+                <button type="button" class=" footer-btn ">
+                    <a href=" #header " class=" arrow arrow-top "></a>
+                    <a href=" #header " class=" footer-arrow ">
+                        Вернуться в начало страницы</a>
+                </button>
+                <div class=" footer-buttons ">
+                    <button type=" submit " form="rf" class=" footer-save disabled " value=" Сохранить данные ">Сохранить</button>
+                    <button type=" submit " form="rf" class=" footer-publish ">Опубликовать</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+<script src=" js/jquery.min.js "></script>
+<script src=" js/main.js "></script>
+<script src=" js/category.js "></script>
+<script src=" js/image.js "></script>
+<script src=" js/video.js "></script>
+<script src=" js/auto.js "></script>
+<script src=" js/submit.js "></script>
+
+
+</body>
+</html>
